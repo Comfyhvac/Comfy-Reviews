@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102c57"><meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Comfy Reviews">
+  <meta name="description" content="Comfy technician review QR code">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/comfy-badge.png" type="image/png"><link rel="apple-touch-icon" href="assets/comfy-badge.png">
+  <link rel="stylesheet" href="styles.css"><title>Comfy | Review Request</title>
+</head><body>
+  <main class="shell">
+    <header class="brand"><img src="assets/comfy-logo.png" alt="Comfy Heating & Air Conditioning logo with technician mascot"></header>
+    <section class="intro"><div class="eyebrow">SERVICE COMPLETE</div><h1>Thanks for choosing <em>Comfy.</em></h1><p>Would you share your experience with a Google review?</p></section>
+    <section class="card" id="projectStep">
+      <div class="eyebrow">STEP 1 · PROJECT PHOTOS</div><h2>Share the work we did</h2>
+      <p class="help">Add up to 3 job photos and a short description. The first photo will accompany the Google project post.</p>
+      <label class="field">Job photos<input id="photos" type="file" accept="image/jpeg,image/png" multiple></label>
+      <div id="photoPreview" class="photo-preview"></div>
+      <label class="field">Job date<input id="jobDate" type="date" required></label>
+      <label class="field">Project post description<textarea id="summary" rows="4" maxlength="1500" placeholder="Example: Our Comfy team completed a furnace repair in Danville today…"></textarea></label>
+      <p id="gpsStatus" class="help" role="status">Checking job location…</p>
+      <label class="permission"><input id="permission" type="checkbox"> Customer permits these photos to be published. I checked for people, house numbers, and private information.</label>
+      <label class="field">Technician access code<input id="accessCode" type="password" autocomplete="off" placeholder="Provided by the office"></label>
+      <button id="submitProject" class="button" type="button">Send project post &amp; show review QR</button>
+      <p id="uploadStatus" class="status" role="status"></p>
+      <button id="skipPhotos" class="text-button" type="button">Show review QR without a project post</button>
+    </section>
+    <section class="card" id="reviewStep" hidden aria-live="polite">
+      <div class="card-top"><div><span class="tiny">REVIEW LOCATION</span><h2 id="locationName">Finding your location…</h2></div><span class="badge" id="locationBadge">●</span></div>
+      <div id="qrWrap" class="qr-wrap"><div class="qr-placeholder">Preparing your review code</div></div>
+      <p class="scan">Scan with your phone camera to leave a review</p>
+      <a id="reviewLink" class="button" target="_blank" rel="noopener noreferrer" hidden>Open Google review page <span aria-hidden="true">↗</span></a>
+      <div class="status" id="status">Checking your current location…</div>
+    </section>
+    <section class="controls"><label for="locationSelect">Select another location</label><select id="locationSelect" aria-label="Select Google review location"></select><button id="retry" type="button">↻ Use my current location</button></section>
+    <button id="newJob" class="text-button" type="button" hidden>Start another job</button><footer><span>TIME TO GET COMFY</span><span>comfyhvac.com</span></footer>
+  </main>
+  <script src="config.js"></script><script src="vendor/qrcode-generator.js"></script><script src="app.js"></script><script src="photos.js"></script>
+</body></html>

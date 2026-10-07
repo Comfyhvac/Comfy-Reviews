@@ -1,0 +1,1 @@
+{"name":"Comfy Review Request","short_name":"Comfy Reviews","description":"Comfy technician Google review QR code","start_url":"./","scope":"./","display":"standalone","background_color":"#f7f9fc","theme_color":"#102c57","icons":[{"src":"assets/comfy-badge.png","sizes":"1254x1254","type":"image/png","purpose":"any"}]}
