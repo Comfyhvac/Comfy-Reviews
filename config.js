@@ -23,4 +23,4 @@ window.COMFY_LOCATIONS = [
 ];
 // Public HTTPS URL of the separately hosted, secured project-post service.
 // Leave blank until Google authorization and backend hosting have been connected.
-window.COMFY_PHOTO_API = '';
+window.COMFY_PHOTO_API = 'https://us-west1-comfy-technician-reviews.cloudfunctions.net/comfyApi';
